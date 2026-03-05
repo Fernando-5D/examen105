@@ -39,7 +39,7 @@ def main(page: ft.Page):
         on_change=lambda e: on_change_exp(e)
     )
 
-    resumen = ft.Text(value="")
+    resumen = ft.Text(value="", size=16, color=ft.Colors.GREEN)
 
     def generarResumen():
         resumen.value = f"""
@@ -73,7 +73,7 @@ def main(page: ft.Page):
                 controls=[
                     ft.ElevatedButton(
                         content="Mostrar Ficha del Participante",
-                        bgcolor=ft.Colors.RED,
+                        bgcolor=ft.Colors.BLUE,
                         on_click=lambda e: generarResumen(e)
                     )
                 ]
