@@ -12,16 +12,16 @@ def main(page: ft.Page):
         options=[
             ft.dropdown.Option("Python para Principiantes"),
             ft.dropdown.Option("Flet Intermedio"),
-            ft.dropdown.Option("Analisis de Datos con Pandas"),
-        ],
+            ft.dropdown.Option("Analisis de Datos con Pandas")
+        ]
     )
 
     modalidad = ft.RadioGroup(
         content=[
             ft.Radio(label="Pago Completo", value="Completo"),
-            ft.Radio(label="Pago por Cuotas", value="Por Cuotas"),
+            ft.Radio(label="Pago por Cuotas", value="Por Cuotas")
         ],
-        value="Completo",
+        value="Completo"
     )
 
     laptop = ft.Checkbox(label="Requiere computadora portatil?")
@@ -36,7 +36,7 @@ def main(page: ft.Page):
         min=1,
         max=5,
         divisions=4,
-        on_change=lambda e: on_change_exp(e),
+        on_change=lambda e: on_change_exp(e)
     )
 
     resumen = ft.Text(value="")
@@ -59,7 +59,7 @@ def main(page: ft.Page):
             ft.Text(
                 value="Registro de Participantes",
                 size=30,
-                weight=ft.FontWeight.BOLD,
+                weight=ft.FontWeight.BOLD
             ),
             nombre,
             email,
@@ -74,16 +74,15 @@ def main(page: ft.Page):
                     ft.ElevatedButton(
                         content="Mostrar Ficha del Participante",
                         bgcolor=ft.Colors.RED,
-                        on_click=lambda e: generarResumen(e),
+                        on_click=lambda e: generarResumen(e)
                     )
-                ],
+                ]
             ),
             ft.Divider(color=ft.Colors.GREY),
-            resumen,
+            resumen
         ],
         spacing=15,
-        alignment=ft.MainAxisAlignment.CENTER,
-    )
-)
+        alignment=ft.MainAxisAlignment.CENTER
+    ))
 
 ft.run(main)
